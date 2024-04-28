@@ -21,7 +21,6 @@ public class FelineTest {
         this.kittenOutput = kittenOutput;
     }
 
-
     @Parameterized.Parameters
     public static Object[][] getAccordionData() {
         return new Object[][] {
@@ -36,7 +35,6 @@ public class FelineTest {
     public void init() {
         MockitoAnnotations.initMocks(this);
     }
-
 
     @Test
     public void testEatMeat() throws Exception {

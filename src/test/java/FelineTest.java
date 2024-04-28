@@ -1,12 +1,11 @@
 import com.example.Feline;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
+import static constants.FelineTestConstants.*;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
@@ -27,34 +26,29 @@ public class FelineTest {
                 { 1, 1},
                 { 2, 2},
                 { 5, 5},
-                { 7, 7},
+                { 7, 7}
         };
-    }
-
-    @Before
-    public void init() {
-        MockitoAnnotations.initMocks(this);
     }
 
     @Test
     public void testEatMeat() throws Exception {
         Feline feline = new Feline();
         List<String> meat = feline.eatMeat();
-        assertEquals(meat, List.of("Животные", "Птицы", "Рыба"));
+        assertEquals(meat, CORRECT_MEAT);
     }
 
     @Test
     public void testGetFamily() {
         Feline feline = new Feline();
         String family = feline.getFamily();
-        assertEquals(family, "Кошачьи");
+        assertEquals(family, CORRECT_FAMILY);
     }
 
     @Test
     public void testGetKittensWithoutArgs() {
         Feline feline = new Feline();
         int kittens = feline.getKittens();
-        assertEquals(kittens, 1);
+        assertEquals(kittens, CORRECT_KITTENS);
     }
 
     @Test

@@ -13,6 +13,7 @@ import java.util.List;
 import static constants.LionTestConstants.*;
 import static org.junit.Assert.*;
 
+// all test are parametrized to avoid constructor errors affecting other methods
 @RunWith(Parameterized.class)
 public class LionTest {
 

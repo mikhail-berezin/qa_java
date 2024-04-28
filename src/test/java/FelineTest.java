@@ -22,7 +22,7 @@ public class FelineTest {
     }
 
     @Parameterized.Parameters
-    public static Object[][] getAccordionData() {
+    public static Object[][] getFelineData() {
         return new Object[][] {
                 { 1, 1},
                 { 2, 2},
